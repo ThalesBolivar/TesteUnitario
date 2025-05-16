@@ -42,8 +42,8 @@ public class UserControllerTest {
 
     @Test
     void deveSalvarUser() {
-        User user = new User(null, "Carlos", "carlos@email.com");
-        User savedUser = new User(1L, "Carlos", "carlos@email.com");
+        User user = new User(null, "Thales", "thales@hmail.com");
+        User savedUser = new User(1L, "Juvenal", "juvenal@hmail.com");
         when(userService.salvarUser(user)).thenReturn(savedUser);
         ResponseEntity<User> response = userController.salvarUser(user);
         assertEquals(201, response.getStatusCodeValue());
